@@ -25,8 +25,8 @@ namespace Observable
         }
         public void RemoveUser(string email)
         {
-            var userToRemove = this.users.FirstOrDefault(user => user.Email == email);
-            this.users.Remove(userToRemove);
+            var userToRemove = this._users.FirstOrDefault(user => user.Email == email);
+            this._users.Remove(userToRemove);
         }
 
         private void CollectionChanged(object sender, System.Collections.Specialized.NotifyCollectionChangedEventArgs e)
